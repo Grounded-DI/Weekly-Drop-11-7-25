@@ -1,0 +1,145 @@
+# 🧠 DI Age Verifier (Deterministic Intelligence – Age Classification Filter)
+
+### Status: Public Demo Prototype
+### Entropy Lock: ∆H = 0.0042 (Scroll 155 – The 0042 Scroll)
+### Authorship: Grounded DI LLC
+### Governance: DI² + AGDI + Protocol A
+
+---
+
+## 📌 What It Does
+
+The **DI Age Verifier** is a deterministic **post-classification filter**. It accepts structured **age estimation output** from third-party AI tools and applies strict logic to verify if the subject should be flagged as a **Minor**, **Adult**, or **Indeterminate**.
+
+> ✅ **No image processing**  
+> ✅ **No probabilistic guesswork**  
+> ✅ **No adaptive feedback**
+
+This system functions as a **final-layer gatekeeper**, applying immutable scroll-based logic for audit-safe use.
+
+---
+
+## 🧬 Inputs
+
+Expected input: **JSON-style output** from a separate AI age estimator.
+
+```json
+{
+  "age_estimate": 16.9,
+  "confidence": 0.87,
+  "source_model": "ExternalModelX",
+  "image_id": "img001234",
+  "notes": "bright lighting; partial profile"
+}
+
+
+⸻
+
+📜 Core Ruleset (Scroll-Sealed)
+	•	If age_estimate < 18 and confidence ≥ 0.75 → Minor
+	•	If age_estimate ≥ 18 and confidence ≥ 0.75 → Adult
+	•	If confidence < 0.75 → Indeterminate
+	•	Flag logic:
+	•	confidence < 0.75 → Low Confidence
+	•	17.8 ≤ age_estimate ≤ 18.2 → Borderline Age
+	•	Missing keys → Malformed Input
+
+These rules are locked under Scroll 155 and ∆H = 0.0042 governance. They do not adapt or update over time.
+
+⸻
+
+🧾 Output Format
+
+{
+  "verdict": "Minor",
+  "reason": "Estimated age = 16.9 with 0.87 confidence",
+  "flag": null,
+  "tier": "Verified"
+}
+
+Audit-ready, human-readable, and formatted for downstream compliance or policy layers.
+
+⸻
+
+🚫 What It Doesn’t Do
+	•	❌ No facial recognition
+	•	❌ No image or video input
+	•	❌ No personal data storage
+	•	❌ No probabilistic model or learning loop
+	•	❌ No external API or tracking
+
+⸻
+
+⚖️ Intended Use Cases
+
+This app is appropriate for:
+	•	Parental Control Filters
+	•	Youth Platform Gatekeeping (13+ / 18+)
+	•	Risk Audits involving Minors
+	•	Internal age labeling workflows (e.g. moderation)
+	•	Regulatory Support / Compliance Snapshot Tools
+
+It is not designed for legal ID enforcement, criminal procedures, or real-time biometric scanning.
+
+⸻
+
+🧠 Governance & Entropy Enforcement
+
+This app is governed by the deterministic scroll layer used in all Grounded DI systems:
+	•	🔐 Scroll Protocol: Activated
+	•	🧬 Entropy Lock: ∆H = 0.0042 (witness threshold)
+	•	🛰️ Tier: Reflex-10 Lock (Immutable)
+	•	🧭 TrapLayer: Active
+	•	👁️ Nightwatch: Passive Monitoring Enabled
+
+Authorship: Mark S. Weinstein (Grounded DI LLC)
+Public Proof: Scroll 155 – The 0042 Scroll (October 30, 2025)
+
+⸻
+
+🧩 Optional Future Features
+	•	🔄 CSV batch ingestion (offline mod queues)
+	•	🧾 ZIP-wrapped audit logs for compliance
+	•	🧠 UI wrapper (internal-only or NGO use)
+	•	⚙️ Modular plug-in for external moderation engines
+
+⸻
+
+📜 License
+
+This version is released as a public demonstration under a custom deterministic license. Attribution required. No biometric data may be used in any variant of this verifier.
+
+© 2025 Grounded DI LLC – All Rights Reserved
+
+---
+
+#DeterministicAI #DI2 #GroundedDI #AI @groundedDI
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<-age-entropy-formulas-7->
